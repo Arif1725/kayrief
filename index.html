@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice WiFi - TurboNet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="invoice-card">
+        <header class="text-center">
+            <h1>INVOICE BDGTECH.ID</h1>
+            <p>Bdg Tech.id</p>
+        </header>
+
+        <div class="speed-details">
+            <h2><i class="fas fa-tachometer-alt"></i> Paket Internet</h2>
+            <div class="speed-metrics">
+                <p>Kecepatan: <strong>10 Mbps</strong></p>
+                <p>Download: 10 Mbps | Upload: 10 Mbps</p>
+                <p>Masa Aktif: 30 Hari</p>
+            </div>
+        </div>
+
+        <div class="customer-info">
+            <h3><i class="fas fa-user"></i> Detail Pelanggan</h3>
+            <p>ID: TBN-2024-005</p>
+            <p>Nama: Budi Santoso</p>
+            <p>Jatuh tempo: 1 Jan 2024 - 31 Jan 2024</p>
+        </div>
+
+        <section class="payment-section">
+            <h3><i class="fas fa-wallet"></i> Metode Pembayaran</h3>
+            
+            <!-- BCA -->
+            <div class="payment-method" onclick="togglePayment('bca')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Bank_Central_Asia.svg" 
+                     class="method-logo" alt="BCA">
+                <div>
+                    <h4>Bank BCA</h4>
+                    <div class="account-details" id="bca">
+                        <p>Nomor Rekening: <strong>826 549 2408</strong></p>
+                        <p>a.n Arif Azis Nugoroho</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GOPAY -->
+            <div class="payment-method" onclick="togglePayment('gopay')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Gopay_logo.svg" 
+                     class="method-logo" alt="GOPAY">
+                <div>
+                    <h4>GOPAY</h4>
+                    <div class="account-details" id="gopay">
+                        <p>Nomor: <strong>085788804690</strong></p>
+                        <p>a.n Arif Azis Nugroho </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DANA -->
+            <div class="payment-method" onclick="togglePayment('dana')">
+                <img src="" class="method-logo" alt="DANA">
+                <div>
+                    <h4>DANA</h4>
+                    <div class="account-details" id="dana">
+                        <p>Nomor: <strong>085788804690</strong></p>
+                        <p>a.n PT. Arif Azis Nugroho</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHOPEEPAY -->
+            <div class="payment-method" onclick="togglePayment('shopeepay')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fe/Shopee_Pay_logo.svg" 
+                     class="method-logo" alt="ShopeePay">
+                <div>
+                    <h4>ShopeePay</h4>
+                    <div class="account-details" id="shopeepay">
+                        <p>Nomor: <strong>085788804690</strong></p>
+                        <p>a.n PT. Arif Azis Nugroho </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="total-section">
+            <h3>Total Pembayaran</h3>
+            <p class="total-amount">Rp 399.000,-</p>
+            <small>Termasuk PPN 11%</small>
+        </div>
+
+        <div class="payment-instruction">
+            <h4><i class="fas fa-info-circle"></i> Instruksi:</h4>
+            <ol>
+                <li>Pilih metode pembayaran</li>
+                <li>Transfer sesuai nominal</li>
+                <li>Konfirmasi pembayaran via WhatsApp</li>
+            </ol>
+            <button onclick="confirmPayment()" 
+                    style="background: var(--secondary-color); color: white; padding: 10px 20px; border: none; border-radius: 5px; margin-top: 1rem;">
+                Konfirmasi Pembayaran
+                    <a href="https://wa.me/6285788804690" target="_blank">
+    <button style="padding: 10px 20px; background-color: #25D366; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Kirim Bukti Pembayaran 
+    </button>
+</a>
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
